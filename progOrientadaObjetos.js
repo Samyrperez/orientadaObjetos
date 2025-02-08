@@ -70,3 +70,4 @@ const pinguino = new Pinguino();
 
 console.log(pajaro.volar());    // Estoy volando
 console.log(pinguino.volar());  // No puedo volar, pero puedo nadar
+
