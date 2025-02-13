@@ -61,7 +61,8 @@ class Operaciones {
         El resultado de la suma es: ${this.num1 + this.num2}
         El resultado de la resta es: ${this.num1 - this.num2}\n
         El resultado de la multipliación es: ${this.num1 * this.num2}\n
-        El resultado de la división es: ${this.num1 / this.num2}`;
+        El resultado de la división es: ${this.num1 / this.num2}
+        `;
     }
 }
 

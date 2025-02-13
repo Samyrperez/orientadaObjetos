@@ -51,3 +51,42 @@ const personaObjeto = JSON.parse(personaJSON);
 console.log(personaObjeto.nombre);
 
 // JSON es muy utilizado en aplicaciones web para enviar y recibir datos entre el cliente y el servidor, ya que es un formato ligero y fácil de interpretar.
+
+// Aclaraciones de uso:
+// - Para respuestas fecth: Usamos response.json() para convertir un objeto json a js
+// Explicacion:
+/* 
+🔹 fetch() devuelve un objeto Response.
+🔹 response.json() convierte el cuerpo de la respuesta en un objeto JavaScript.
+🔹 Solo se usa con fetch() y otras funciones que devuelven un objeto Response.
+*/
+
+//  Para strings en formato JSON
+// Si ya tienes un JSON en formato de texto, usas JSON.parse() para convertirlo en un objeto JavaScript.
+/*
+🔹 Se usa cuando tienes un string JSON.
+🔹 No funciona directamente con fetch(), porque fetch() devuelve un objeto Response, no un string JSON.
+*/
+
+/* Ejemplo INCORRECTO con JSON.parse() y fetch()
+
+async function obtenerDatos() {
+    let response = await fetch("https://rickandmortyapi.com/api/character/1");
+    let data = JSON.parse(response); // ❌ Error: response no es un string
+    console.log(data);
+}
+
+obtenerDatos();
+
+🔴 Falla porque response no es un string JSON, sino un objeto Response.
+
+Ejemplo CORRECTO con JSON.parse() 
+Imagina que recibes datos de localStorage (que almacena en formato string):
+
+const datosJSON = '{"nombre": "Morty", "especie": "Humano"}';
+const datosObjeto = JSON.parse(datosJSON);
+console.log(datosObjeto.nombre); // "Morty"
+
+*/
+
+
